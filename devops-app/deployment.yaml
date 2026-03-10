@@ -3,6 +3,9 @@ kind: Deployment
 
 metadata:
   name: devops-demo
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: demo=ghcr.io/jay-2000/devops-gitops-project/devops-demo
+    argocd-image-updater.argoproj.io/update-strategy: latest
 
 spec:
   replicas: 2
